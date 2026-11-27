@@ -326,14 +326,14 @@ def main() -> int:
     # 7. sitemap targets, canonical tags, duplicate ids, JSON-LD validity
     sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
     for loc in re.findall(r"<loc>([^<]+)</loc>", sitemap):
-        rel = loc.split("trellmere-site/")[-1] or "index.html"
+        rel = re.sub(r"^.*?/(?:trellmere-site|trellmere-site-public)/", "", loc) or "index.html"
         (ok if (ROOT / rel).is_file() else bad)(f"sitemap target exists: {rel}")
     for page_file in sorted(ROOT.rglob("*.html")):
         if ".git" in page_file.parts:
             continue
         page_text = page_file.read_text(encoding="utf-8")
         canon = re.findall(r'<link rel="canonical" href="([^"]+)"', page_text)
-        (ok if len(canon) == 1 and canon[0].startswith("https://kyliantewarie.github.io/trellmere-site/")
+        (ok if len(canon) == 1 and canon[0].startswith("https://kyliantewarie.github.io/trellmere-site-public/")
          else bad)(f"canonical tag: {page_file.relative_to(ROOT)}")
         element_ids = re.findall(r'\sid="([^"]+)"', page_text)
         dup = sorted({i for i in element_ids if element_ids.count(i) > 1})
