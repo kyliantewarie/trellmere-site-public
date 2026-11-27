@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kyliantewarie.github.io/trellmere-site-public/sitemap.xml

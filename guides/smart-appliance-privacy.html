@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to stop smart appliances phoning home | Trellmere</title>
+  <meta name="description" content="A practical approach to IoT privacy: find out which devices call home, block telemetry without breaking function, and why blanket DNS blocking is not enough.">
+  <link rel="canonical" href="https://kyliantewarie.github.io/trellmere-site-public/guides/smart-appliance-privacy.html">
+  <link rel="stylesheet" href="../assets/style.css?v=3">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html"><span class="brand-mark">T</span>Trellmere <small>/ digital products</small></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a><a href="../catalog.html" data-nav="catalog.html">Products</a>
+        <a href="sheet-metal-bend-allowance.html">Guides</a>
+        <a href="../index.html#signup" class="btn btn-primary btn-sm nav-cta">Free cheat sheet</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="breadcrumb" style="padding-top:44px"><a href="../index.html">Home</a> / Guides</div>
+      <article class="prose">
+        <span class="eyebrow">Guide · 7 min</span>
+        <h1 style="font-size:clamp(2rem,4vw,2.8rem);letter-spacing:-.035em;line-height:1.15;margin:0 0 16px">How to stop smart appliances phoning home</h1>
+        <p class="muted">Your television does not need to contact the manufacturer to display a video. But blocking the wrong domain can break casting, updates or voice control. Here is a safer order of operations.</p>
+
+        <h2>Step 1: see what each device actually does</h2>
+        <p>Before blocking anything, observe. Put a DNS resolver between the device and the network and log which domains it asks for. The pattern matters: a handful of functional endpoints plus a cluster of analytics and telemetry hosts.</p>
+
+        <h2>Step 2: block by device, not by network</h2>
+        <p>A blanket blocklist applied to every device is blunt. The same domain can be harmless for your laptop and unwanted for your TV. Per-appliance classification lets you allow functional traffic while blocking telemetry on one device only.</p>
+
+        <h2>Step 3: allow-list function first</h2>
+        <p>Start from what must keep working — firmware updates, casting, local control, authentication. Allow those explicitly, then block everything else you observed. If something breaks, you have a precise place to look.</p>
+
+        <h2>Step 4: avoid TLS interception</h2>
+        <p>Intercepting HTTPS gives you visibility but introduces a root certificate on every device, breaks certificate pinning, and creates a new attack surface. DNS-level classification gets most of the benefit without touching encrypted payloads.</p>
+
+        <div class="callout"><strong>Why free ad-blockers are not quite the same job:</strong> Pi-hole and AdGuard Home are excellent at network-wide ad blocking. They do not know which appliance made a request, so they cannot allow functional traffic per device.</div>
+
+        <h2>Step 5: keep the ruleset current</h2>
+        <p>Vendors change hostnames. A ruleset that is not maintained silently stops working. Check that updates are signed and that the update process is local and verifiable.</p>
+
+        <p><a href="../products/smart-appliance-shield.html">Smart Appliance Shield</a> implements this approach: per-appliance classification, a signed 5,238-pattern ruleset, no TLS interception, and a local dashboard. It runs on Home Assistant or OpenWrt.</p>
+        <p><span class="btn btn-primary is-disabled" title="Listing unpublished — pending CRA gates">Smart Appliance Shield — unavailable</span></p>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© <span data-year>2026</span> Trellmere.</span><span class="footer-links"><a href="../catalog.html">Products</a><a href="../index.html#signup">Free cheat sheet</a></span></div></footer>
+  <script src="../assets/products.js?v=3"></script><script src="../assets/site.js?v=3"></script>
+</body>
+</html>

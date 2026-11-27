@@ -1,0 +1,5 @@
+# Optional helper tools in tools/ (the Gumroad and artwork scripts).
+# tools/verify_site.py — the site integrity gate — is stdlib-only and needs no
+# third-party packages.
+requests==2.34.2
+Pillow==13.0.0

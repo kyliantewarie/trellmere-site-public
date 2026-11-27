@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Appliance Shield — per-device network privacy | Trellmere</title>
+  <meta name="description" content="Stop smart appliances phoning home. Per-appliance network privacy with a signed 5,238-pattern ruleset for Home Assistant and OpenWrt. No TLS interception.">
+  <link rel="canonical" href="https://kyliantewarie.github.io/trellmere-site-public/products/smart-appliance-shield.html">
+  <link rel="stylesheet" href="../assets/style.css?v=3">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Smart Appliance Shield", "applicationCategory": "HomeAssistantAddon", "operatingSystem": "Home Assistant / OpenWrt"}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html"><span class="brand-mark">T</span>Trellmere <small>/ digital products</small></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a><a href="../catalog.html" data-nav="catalog.html">Products</a>
+        <a href="../guides/index.html" data-nav="guides/index.html">Guides</a>
+        <a href="../index.html#signup" class="btn btn-primary btn-sm nav-cta">Free cheat sheet</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container detail-hero">
+      <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../catalog.html">Products</a> / Smart Appliance Shield</div>
+      <div class="callout"><strong>Independent third-party product.</strong> Developed by Trellmere. <strong>Not affiliated with, endorsed by, sponsored by, or in any way connected to</strong> Phoenix Contact, Siemens, Blender Foundation, Home Assistant, OpenWrt, Microsoft, PLCopen or any standards body named. Trademarks are the property of their respective owners and are used only to describe compatibility.</div>
+      <div class="detail">
+        <div>
+          <span class="eyebrow">Home Assistant / OpenWrt</span>
+          <h1>Your TV doesn't need to call the manufacturer.</h1>
+          <p class="lede">Smart Appliance Shield classifies traffic by appliance, blocks telemetry and keeps functional traffic working — without intercepting TLS or sending your data anywhere.</p>
+          <img class="card-thumb" src="https://public-files.gumroad.com/4qtadl7kbplq39hzbwnxd9z7ho03" alt="Smart Appliance Shield product preview" style="margin:24px 0">
+          <h2>How it works</h2>
+          <ul class="prose-list">
+            <li>A SHA-256-signed ruleset with 5,238 patterns across 213 categories, verified at every start.</li>
+            <li>A DNS proxy and interceptor identify which appliance is making each request.</li>
+            <li>An enforcer blocks telemetry domains while allow-listing functional traffic.</li>
+            <li>A local dashboard shows what each device is trying to reach.</li>
+            <li>Ships as a Home Assistant add-on or a prebuilt OpenWrt <code>.ipk</code>.</li>
+          </ul>
+          <h2>What makes it different</h2>
+          <p>Unlike a blanket Pi-hole-style blocklist, the classifier is per-appliance: the same domain can be allowed for your laptop and blocked for your TV. There is no TLS interception and no cloud component.</p>
+          <div class="callout"><strong>Verified.</strong> 166/166 security tests and 33/33 Gumroad-package checks pass. The prebuilt <code>.ipk</code> is structurally valid and boots with the signed ruleset.</div>
+          <p class="muted small">Honest note: free alternatives (Pi-hole, AdGuard Home, Technitium, Cloudflare Zero Trust) handle general ad-blocking well. The value here is appliance-level classification with allow-listing. MIT licensed.</p>
+        </div>
+        <aside class="detail-buy">
+          <div class="big-price">Pay what you want</div>
+          <div class="price-sub">€19 suggested · pay what you want · signed ruleset included</div>
+          <div data-buy-for="smart-appliance-shield"></div>
+          <noscript><span class="btn btn-primary btn-block is-disabled" title="Listing unpublished — pending CRA gates">Unavailable — pending republish</span></noscript>
+          <ul>
+            <li>Home Assistant add-on + OpenWrt .ipk</li>
+            <li>Signed 5,238-pattern ruleset</li>
+            <li>Local dashboard</li>
+            <li>No TLS interception, no cloud</li>
+            <li>Source included (MIT)</li>
+          </ul>
+        <p class="disclaimer">Independent third-party product. <strong>Not affiliated with, endorsed by, sponsored by or connected to</strong> any named vendor or standards body.</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© <span data-year>2026</span> Trellmere.</span><span class="footer-links"><a href="../catalog.html">Products</a><a href="../index.html#signup">Free cheat sheet</a></span></div></footer>
+  <script src="../assets/products.js?v=3"></script><script src="../assets/site.js?v=3"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trellmere — Practical software for makers, engineers and smart-home builders</title>
+  <meta name="description" content="Battle-tested Blender add-ons, Home Assistant tools and industrial control libraries that save hours of busywork. Built by an engineer, shipped with source and support.">
+  <meta name="theme-color" content="#0b0f14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Trellmere — Practical software for makers and engineers">
+  <meta property="og:description" content="Blender add-ons, Home Assistant tools and PLC libraries that save hours of busywork.">
+  <meta property="og:url" content="https://kyliantewarie.github.io/trellmere-site-public/">
+  <link rel="canonical" href="https://kyliantewarie.github.io/trellmere-site-public/">
+  <link rel="stylesheet" href="assets/style.css?v=3">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Trellmere","url":"https://kyliantewarie.github.io/trellmere-site-public/","description":"Practical software for makers, engineers and smart-home builders."}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">T</span>Trellmere <small>/ digital products</small></a>
+      <nav class="nav">
+        <a href="index.html" data-nav="index.html">Home</a>
+        <a href="catalog.html" data-nav="catalog.html">Products</a>
+        <a href="guides/index.html" data-nav="guides/index.html">Guides</a>
+        <a href="#signup" class="btn btn-primary btn-sm nav-cta">Get the free cheat sheet</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div role="status" style="max-width:72rem;margin:1.5rem auto 0;padding:14px 18px;border:1px solid #fbbf24;background:rgba(251,191,36,.10);color:#fbbf24;border-radius:10px;font-weight:600">Products are temporarily unavailable while compliance work is completed. Follow the Gumroad store for release updates — the free K-factor cheat sheet is available now.</div>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Built as practical tools, not marketing demos</span>
+          <h1>Tools that get the <span class="hl">boring part</span> right.</h1>
+          <p class="lead">Flat patterns with real bend math. Backups you can actually verify. A network that stops appliances phoning home. Small, focused products — each one solving one job properly.</p>
+          <div class="hero-actions">
+            <a href="catalog.html" class="btn btn-primary">Browse products →</a>
+            <a href="#signup" class="btn btn-ghost">Get the free K-factor sheet</a>
+          </div>
+          <div class="hero-proof">
+            <div class="proof-item"><strong>12</strong><span>tools in progress</span></div>
+            <div class="proof-item"><strong>0</strong><span>cloud dependencies</span></div>
+          </div>
+        </div>
+        <div class="window" aria-label="Example SheetFab output">
+          <div class="window-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="window-title">sheetfab — bend table</span></div>
+          <div class="window-body">
+<span class="c"># SheetFab · material: mild steel</span>
+<span class="k">thickness</span>   <span class="n">2.0</span> mm
+<span class="k">inside_r</span>    <span class="n">3.0</span> mm
+<span class="k">k_factor</span>    <span class="n">0.42</span>
+
+<span class="c"># bend allowance / deduction</span>
+BA   = θ(R + Kt)        = <span class="s">4.71 mm</span>
+OSSB = (R + t)·tan(θ/2) = <span class="s">3.41 mm</span>
+BD   = 2·OSSB − BA      = <span class="s">2.11 mm</span>
+
+<span class="c"># export</span>
+<span class="s">✓</span> CUT / BEND_UP / BEND_DOWN / HOLES / INFO
+<span class="s">✓</span> flat_pattern.dxf + bend_table.csv
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-alt">
+      <div class="container">
+        <div class="section-head center">
+          <h2>Start here</h2>
+          <p>The products people most often need first.</p>
+        </div>
+        <noscript><div class="callout"><strong>Start here</strong><ul>
+        <li><a href="products/draftforge.html">DraftForge</a></li>
+        <li><a href="products/sheetfab.html">SheetFab</a></li>
+        <li><a href="products/backup-guardian.html">Backup Guardian</a></li>
+        </ul></div></noscript>
+        <div class="grid grid-3" data-product-grid="featured" id="featured-grid"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="features">
+          <div class="feature"><div class="ico">⌁</div><h3>Checked, with limits stated</h3><p>Each product ships with its own verification notes and explicit limits. Backup Guardian runs 508 checks; SheetFab cross-checks its flat-length math two independent ways. PLCnext products are structurally validated and simulation-reviewed, not compiled in Engineer or hardware-tested — see each product page.</p></div>
+          <div class="feature"><div class="ico">◎</div><h3>Runs locally</h3><p>No cloud, no telemetry, no licence server. Your models, backups and network data never leave your machine.</p></div>
+          <div class="feature"><div class="ico">↗</div><h3>Source included</h3><p>Open licences where the code is open. You get the working tool, the source and a direct line to the person who wrote it.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-alt" id="signup">
+      <div class="container">
+        <div class="signup">
+          <div>
+            <span class="eyebrow">Free · no spam</span>
+            <h2>The K-factor &amp; bend allowance cheat sheet</h2>
+            <p>One printable page with the formulas, a K-factor starting table by material, and the test-coupon method shops use to dial in a real value.</p>
+            <ul>
+              <li>BA, OSSB and bend deduction formulas in one place</li>
+              <li>Starting K-factors for steel, aluminium and stainless</li>
+              <li>A 10-minute coupon test to stop guessing</li>
+              <li>Occasional notes when a new tool ships</li>
+            </ul>
+          </div>
+          <div class="signup-form">
+            <h3>Get it free on Gumroad</h3>
+            <p class="hint">One click, no account needed. Gumroad delivers the PDF and keeps your receipt.</p>
+            <a class="btn btn-primary btn-block" href="https://kylian47.gumroad.com/l/k-factor-cheat-sheet" rel="noopener">Get the free cheat sheet →</a>
+            <p class="form-note">Want to read first? <a href="lead-magnets/k-factor-cheat-sheet.html">Open the web version →</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>From the lab</h2>
+          <p>Short, practical guides written from the same code the products use.</p>
+        </div>
+        <div class="grid grid-3">
+          <a class="card" href="guides/sheet-metal-bend-allowance.html">
+            <span class="card-cat">Guide · 8 min</span>
+            <h3>Flat patterns without the guesswork</h3>
+            <p class="summary">Bend allowance, bend deduction, K-factor and outside setback — what each number means and how to verify it against a real press brake.</p>
+            <span class="btn btn-ghost btn-sm">Read guide →</span>
+          </a>
+          <a class="card" href="guides/home-assistant-backup-checklist.html">
+            <span class="card-cat">Guide · 6 min</span>
+            <h3>Five checks before you trust a backup</h3>
+            <p class="summary">Age, size, coverage, archive contents and a restore drill — the five checks a Home Assistant backup needs before you rely on it.</p>
+            <span class="btn btn-ghost btn-sm">Read guide →</span>
+          </a>
+          <a class="card" href="guides/smart-appliance-privacy.html">
+            <span class="card-cat">Guide · 7 min</span>
+            <h3>Stop smart appliances phoning home</h3>
+            <p class="summary">Observe first, block per device, allow function before telemetry, and avoid TLS interception. A practical order of operations.</p>
+            <span class="btn btn-ghost btn-sm">Read guide →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-year>2026</span> Trellmere. Built for people who like things done properly.</span>
+      <span class="footer-links"><a href="catalog.html">Products</a><a href="guides/index.html" data-nav="guides/index.html">Guides</a><a href="lead-magnets/k-factor-cheat-sheet.html">Free cheat sheet</a></span>
+    </div>
+  </footer>
+
+  <script src="assets/products.js?v=3"></script>
+  <script src="assets/site.js?v=3"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home Assistant backup checklist: 5 checks before you trust a backup | Trellmere</title>
+  <meta name="description" content="A backup that says 'success' is not the same as a backup that restores. Five concrete checks for Home Assistant backups: age, size, coverage, contents and a restore drill.">
+  <link rel="canonical" href="https://kyliantewarie.github.io/trellmere-site-public/guides/home-assistant-backup-checklist.html">
+  <link rel="stylesheet" href="../assets/style.css?v=3">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html"><span class="brand-mark">T</span>Trellmere <small>/ digital products</small></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a><a href="../catalog.html" data-nav="catalog.html">Products</a>
+        <a href="sheet-metal-bend-allowance.html">Guides</a>
+        <a href="../index.html#signup" class="btn btn-primary btn-sm nav-cta">Free cheat sheet</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="breadcrumb" style="padding-top:44px"><a href="../index.html">Home</a> / Guides</div>
+      <article class="prose">
+        <span class="eyebrow">Guide · 6 min</span>
+        <h1 style="font-size:clamp(2rem,4vw,2.8rem);letter-spacing:-.035em;line-height:1.15;margin:0 0 16px">Five checks before you trust a Home Assistant backup</h1>
+        <p class="muted">"Backup successful" means a file was written. It does not mean the file will restore, contains everything, or still works with your current version.</p>
+
+        <h2>1. Age</h2>
+        <p>How old is the newest good backup? A perfect backup from three months ago is still a three-month-old configuration. Set a threshold you are comfortable with — one day for an active system, seven days for a stable one — and alert when you cross it.</p>
+
+        <h2>2. Size</h2>
+        <p>Compare each backup against a rolling median. A sudden drop to 40% of normal size usually means an add-on or a config folder was skipped. A backup that is too small is worse than no backup, because you trust it.</p>
+
+        <h2>3. Coverage</h2>
+        <p>Confirm the archive actually contains what you need: configuration, add-ons, folders and the entity/device registries. Home Assistant can finish a backup while silently omitting a component.</p>
+
+        <h2>4. Contents</h2>
+        <p>Read the archive and verify its members against what the manifest claims. For encrypted backups, do <strong>not</strong> trust the metadata <code>protected</code> flag — check the archive itself. Path traversal entries must be rejected during extraction.</p>
+
+        <div class="callout"><strong>Answerable question:</strong> "If I wiped this machine right now, could I restore from the newest backup?" If you cannot answer yes with evidence, you do not have a backup — you have a file.</div>
+
+        <h2>5. Restore drill</h2>
+        <p>Extract the archive to a throwaway directory and check what is inside. Never run a drill against the live system. A drill is the only check that proves the archive is readable end to end.</p>
+
+        <h2>Make it a habit</h2>
+        <p>These five checks are mechanical. Automate them, keep the output, and glance at the result weekly. <a href="../products/backup-guardian.html">Backup Guardian</a> runs exactly this set of checks, safely and fail-closed, and can turn the result into a printable readiness report.</p>
+        <p><span class="btn btn-primary is-disabled" title="Listing unpublished — pending CRA gates">Backup Guardian — unavailable</span></p>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© <span data-year>2026</span> Trellmere.</span><span class="footer-links"><a href="../catalog.html">Products</a><a href="../index.html#signup">Free cheat sheet</a></span></div></footer>
+  <script src="../assets/products.js?v=3"></script><script src="../assets/site.js?v=3"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Backup Guardian — verify your Home Assistant backups | Trellmere</title>
+  <meta name="description" content="Fail-closed backup verification for Home Assistant: age, size, coverage, encrypted archives and restore drills, plus a branded readiness report.">
+  <link rel="canonical" href="https://kyliantewarie.github.io/trellmere-site-public/products/backup-guardian.html">
+  <link rel="stylesheet" href="../assets/style.css?v=3">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Backup Guardian", "applicationCategory": "HomeAssistantAddon", "operatingSystem": "Home Assistant"}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html"><span class="brand-mark">T</span>Trellmere <small>/ digital products</small></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a><a href="../catalog.html" data-nav="catalog.html">Products</a>
+        <a href="../guides/index.html" data-nav="guides/index.html">Guides</a>
+        <a href="../index.html#signup" class="btn btn-primary btn-sm nav-cta">Free cheat sheet</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container detail-hero">
+      <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../catalog.html">Products</a> / Backup Guardian</div>
+      <div class="callout"><strong>Independent third-party product.</strong> Developed by Trellmere. <strong>Not affiliated with, endorsed by, sponsored by, or in any way connected to</strong> Phoenix Contact, Siemens, Blender Foundation, Home Assistant, OpenWrt, Microsoft, PLCopen or any standards body named. Trademarks are the property of their respective owners and are used only to describe compatibility.</div>
+      <div class="detail">
+        <div>
+          <span class="eyebrow">Home Assistant add-on</span>
+          <h1>A backup you haven't verified is just a hope.</h1>
+          <p class="lede">Backup Guardian checks the age, size, coverage and integrity of your Home Assistant backups — including encrypted archives — and runs a restore drill. No restore to the live system, ever.</p>
+          <img class="card-thumb" src="https://public-files.gumroad.com/jul5y4sbkk7as1d0gz34c2ii7kv3" alt="Backup Guardian product preview" style="margin:24px 0">
+          <h2>What it checks</h2>
+          <ul class="prose-list">
+            <li><strong>Age</strong> — how old the newest good backup is.</li>
+            <li><strong>Size</strong> — median-baseline drop detection to catch partial backups.</li>
+            <li><strong>Coverage</strong> — are add-ons and config folders actually included?</li>
+            <li><strong>Locations</strong> — every configured backup destination.</li>
+            <li><strong>Members</strong> — archive contents verified against metadata.</li>
+            <li><strong>Restore drill</strong> — extraction to a throwaway directory with path-traversal protection.</li>
+            <li><strong>Encrypted backups</strong> — deliberately refuses to trust the metadata <code>protected</code> flag.</li>
+          </ul>
+          <h2>Readiness report</h2>
+          <p>Turn any verification result into a branded PDF handover document — useful if you maintain Home Assistant for clients or just want a record you can print.</p>
+          <div class="callout"><strong>Fail-closed by design.</strong> 508/508 checks pass. The engine never writes to the live system and never claims a backup is good unless the evidence supports it.</div>
+          <p class="muted small">MIT licensed. Free alternatives exist (BackupCheckup, ha-backup-tool) — you're paying for packaging, the report and support, not exclusive access to the checks.</p>
+        </div>
+        <aside class="detail-buy">
+          <div class="big-price">Pay what you want</div>
+          <div class="price-sub">€9 suggested · pay what you want · add-on + report</div>
+          <div data-buy-for="backup-guardian"></div>
+          <noscript><span class="btn btn-primary btn-block is-disabled" title="Listing unpublished — pending CRA gates">Unavailable — pending republish</span></noscript>
+          <ul>
+            <li>Home Assistant add-on, one-click install</li>
+            <li>Standalone mode also included</li>
+            <li>Branded PDF readiness report</li>
+            <li>508 automated checks</li>
+            <li>Source included (MIT)</li>
+          </ul>
+          <p class="disclaimer">Reads backups only — never restores to or modifies your live system.</p>
+        <p class="disclaimer">Independent third-party product. <strong>Not affiliated with, endorsed by, sponsored by or connected to</strong> any named vendor or standards body.</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© <span data-year>2026</span> Trellmere.</span><span class="footer-links"><a href="../catalog.html">Products</a><a href="../index.html#signup">Free cheat sheet</a></span></div></footer>
+  <script src="../assets/products.js?v=3"></script><script src="../assets/site.js?v=3"></script>
+</body>
+</html>

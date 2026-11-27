@@ -1,0 +1,82 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Length 3185 >>
+stream
+BT /F2 20 Tf 0.00 g 52.0 790.0 Td (K-factor & bend allowance) Tj ET
+BT /F1 10 Tf 0.40 g 52.0 764.0 Td (Free cheat sheet - Toolform Digital Products) Tj ET
+0.78 g 52.0 756.0 491.0 0.7 re f
+BT /F2 12 Tf 0.00 g 52.0 732.0 Td (The formulas) Tj ET
+0.94 g 48.0 708.0 499.0 16.0 re f
+BT /F1 9.5 Tf 0.10 g 52.0 712.0 Td (theta in radians . t thickness . R inside radius . K K-factor) Tj ET
+0.94 g 48.0 689.0 499.0 16.0 re f
+BT /F1 9.5 Tf 0.10 g 52.0 693.0 Td (BA  = theta * \(R + K*t\)               bend allowance) Tj ET
+0.94 g 48.0 670.0 499.0 16.0 re f
+BT /F1 9.5 Tf 0.10 g 52.0 674.0 Td (OSSB = \(R + t\) * tan\(theta / 2\)       outside setback) Tj ET
+0.94 g 48.0 651.0 499.0 16.0 re f
+BT /F1 9.5 Tf 0.10 g 52.0 655.0 Td (BD  = 2*OSSB - BA                     bend deduction) Tj ET
+BT /F1 9.5 Tf 0.25 g 52.0 626.0 Td (Flat length from outside dimensions: FL = L1 + L2 - BD.  Flat length by segments: sum the) Tj ET
+BT /F1 9.5 Tf 0.25 g 52.0 612.0 Td (straight lengths plus each BA.) Tj ET
+BT /F2 12 Tf 0.00 g 52.0 584.0 Td (Starting K-factors \(air bending\)) Tj ET
+BT /F2 9.5 Tf 0.00 g 52.0 564.0 Td (Mild steel) Tj ET
+BT /F1 9.5 Tf 0.00 g 202.0 564.0 Td (0.40 - 0.44) Tj ET
+BT /F1 9.5 Tf 0.40 g 312.0 564.0 Td (start at 0.42) Tj ET
+0.78 g 52.0 559.0 491.0 0.7 re f
+BT /F2 9.5 Tf 0.00 g 52.0 544.0 Td (Stainless steel) Tj ET
+BT /F1 9.5 Tf 0.00 g 202.0 544.0 Td (0.44 - 0.47) Tj ET
+BT /F1 9.5 Tf 0.40 g 312.0 544.0 Td (larger springback) Tj ET
+0.78 g 52.0 539.0 491.0 0.7 re f
+BT /F2 9.5 Tf 0.00 g 52.0 524.0 Td (Aluminium) Tj ET
+BT /F1 9.5 Tf 0.00 g 202.0 524.0 Td (0.33 - 0.40) Tj ET
+BT /F1 9.5 Tf 0.40 g 312.0 524.0 Td (softer, more stretch) Tj ET
+0.78 g 52.0 519.0 491.0 0.7 re f
+BT /F1 9.5 Tf 0.25 g 52.0 498.0 Td (R > 2t -> K trends to 0.5. R < t -> K trends lower. These are estimates, not shop) Tj ET
+BT /F1 9.5 Tf 0.25 g 52.0 484.0 Td (calibration.) Tj ET
+BT /F2 12 Tf 0.00 g 52.0 452.0 Td (The 10-minute coupon test) Tj ET
+BT /F1 9.5 Tf 0.10 g 52.0 432.0 Td (1.) Tj ET
+BT /F1 9.5 Tf 0.20 g 70.0 432.0 Td (Cut a 20 x 100 mm strip from the same sheet.) Tj ET
+BT /F1 9.5 Tf 0.10 g 52.0 415.0 Td (2.) Tj ET
+BT /F1 9.5 Tf 0.20 g 70.0 415.0 Td (Bend 90 degrees on the same brake and tooling as the part.) Tj ET
+BT /F1 9.5 Tf 0.10 g 52.0 398.0 Td (3.) Tj ET
+BT /F1 9.5 Tf 0.20 g 70.0 398.0 Td (Measure outside legs L1 and L2 to 0.1 mm.) Tj ET
+BT /F1 9.5 Tf 0.10 g 52.0 381.0 Td (4.) Tj ET
+BT /F1 9.5 Tf 0.20 g 70.0 381.0 Td (Compute BD = 100 - \(L1 + L2\).) Tj ET
+BT /F1 9.5 Tf 0.10 g 52.0 364.0 Td (5.) Tj ET
+BT /F1 9.5 Tf 0.20 g 70.0 364.0 Td (Recover BA = 2*OSSB - BD.) Tj ET
+BT /F1 9.5 Tf 0.10 g 52.0 347.0 Td (6.) Tj ET
+BT /F1 9.5 Tf 0.20 g 70.0 347.0 Td (Solve K = \(BA/theta - R\) / t. Write it down with material and tooling.) Tj ET
+0.93 g 48.0 308.0 499.0 34.0 re f
+BT /F2 9.5 Tf 0.00 g 52.0 314.0 Td (Want the math done for you?) Tj ET
+BT /F1 9 Tf 0.25 g 52.0 299.0 Td (SheetFab computes bend allowance, deduction and layered DXF flat patterns inside Blender,) Tj ET
+BT /F1 9 Tf 0.25 g 52.0 285.0 Td (then cross-checks every flat length two ways.) Tj ET
+BT /F1 8 Tf 0.45 g 52.0 36.0 Td (Toolform Digital Products - gumroad.com/kylian47 - not shop-specific calibration.) Tj ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 5 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 3 0 R >>
+endobj
+5 0 obj
+<< /Type /Pages /Kids [4 0 R] /Count 1 >>
+endobj
+6 0 obj
+<< /Type /Catalog /Pages 5 0 R >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000106 00000 n 
+0000000208 00000 n 
+0000003445 00000 n 
+0000003581 00000 n 
+0000003638 00000 n 
+trailer
+<< /Size 7 /Root 6 0 R >>
+startxref
+3687
+%%EOF

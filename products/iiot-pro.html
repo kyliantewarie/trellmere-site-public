@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IIoT Pro — 34 PLCnext function blocks | Trellmere</title>
+  <meta name="description" content="Thirty-four tested Structured Text function blocks for PLCnext Engineer 2026.6: MQTT, OPC UA, Modbus, JSON, REST and bounded retry. Protocol logic you can inspect, with tests you can run.">
+  <link rel="canonical" href="https://kyliantewarie.github.io/trellmere-site-public/products/iiot-pro.html">
+  <link rel="stylesheet" href="../assets/style.css?v=3">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "IIoT Pro", "applicationCategory": "DeveloperApplication", "operatingSystem": "PLCnext Engineer 2026.6", "offers": {"@type": "Offer", "price": "89", "priceCurrency": "EUR"}}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html"><span class="brand-mark">T</span>Trellmere <small>/ digital products</small></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a><a href="../catalog.html" data-nav="catalog.html">Products</a>
+        <a href="../guides/index.html" data-nav="guides/index.html">Guides</a>
+        <a href="../index.html#signup" class="btn btn-primary btn-sm nav-cta">Free cheat sheet</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container detail-hero">
+      <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../catalog.html">Products</a> / IIoT Pro</div>
+      <div class="callout"><strong>Independent third-party product.</strong> Developed by Trellmere. <strong>Not affiliated with, endorsed by, sponsored by, or in any way connected to</strong> Phoenix Contact, Siemens, Blender Foundation, Home Assistant, OpenWrt, Microsoft, PLCopen or any standards body named. Trademarks are the property of their respective owners and are used only to describe compatibility.</div>
+      <div class="detail">
+        <div>
+          <span class="eyebrow">PLCnext Engineer 2026.6 · New</span>
+          <h1>Stop rewriting protocol glue on every PLCnext project.</h1>
+          <p class="lede">Thirty-four tested Structured Text function blocks for the encoding, parsing, validation and framing work that otherwise gets repeated on every industrial IoT job.</p>
+          <img class="card-thumb" src="../assets/listing-art/iiot-pro-cover-1280x720.png" alt="IIoT Pro cover" style="margin:24px 0">
+
+          <h2>What is inside</h2>
+          <ul class="prose-list">
+            <li><strong>JSON (7)</strong> — escaping, string and numeric members, flat arrays, object merging, two-level <code>a.b</code> path extraction.</li>
+            <li><strong>MQTT (7)</strong> — remaining-length codec, topic filter validation and <code>+</code>/<code>#</code> matching, CONNECT/PUBLISH descriptors, CONNACK parsing and a QoS-2 handshake step.</li>
+            <li><strong>OPC UA (6)</strong> — NodeId validation, method arguments, StatusCode classification, Read/Write/Browse descriptors.</li>
+            <li><strong>Modbus (8)</strong> — CRC-16 for 8 and 16 bytes, RTU request builder, response parsing for 4 or 8 registers, received-CRC verification, TCP MBAP header and exception text.</li>
+            <li><strong>REST (5)</strong> — CRLF-correct requests, response parsing, URL/form encoding, chunked detection and full chunked-body decoding.</li>
+            <li><strong>Common (1)</strong> — deterministic exponential backoff with bounded jitter.</li>
+          </ul>
+
+          <h2>What it is — and is not</h2>
+          <p>The blocks implement <strong>protocol logic</strong>. They do not open sockets and do not call an OPC UA server. You pass validated descriptors and frames to the transport of your choice — Phoenix Contact <code>IIOT_Library</code>, GDS connectors or an HTTP client. <code>docs/INTEGRATION.md</code> maps every block to a transport, and <code>docs/EXAMPLE.md</code> contains a complete copyable example.</p>
+          <p class="muted small">Third-party product, not affiliated with Phoenix Contact. <strong>Not safety-rated</strong> — keep safety interlocks in certified IEC 61131-3 code.</p>
+
+          <h2>Verified</h2>
+          <ul class="prose-list">
+            <li>Imported via <code>File → Import → Import From IEC 61131-10</code> and <strong>rebuilt in PLCnext Engineer 2026.6 without errors</strong>.</li>
+            <li>All 34 exports validate against the official IEC 61131-10 XSD shipped with Engineer.</li>
+            <li><strong>210 structural checks</strong> and <strong>54 executable tests</strong>, including a 500-case MQTT codec round-trip and known Modbus CRC vectors.</li>
+            <li>Unique GUID handles, deterministic XML generation, offline operation, no licence server.</li>
+          </ul>
+
+          <h2>What you get</h2>
+          <p>34 individual POU XML files plus one merged XML for a single import, full Structured Text source, generated block manual, integration guide, worked example, and the Python reference model with tests and verifier. Free updates for the 1.x line.</p>
+
+          <div class="callout"><strong>Available now.</strong> The download includes the 34 POU exports, one merged XML, full source, manual, integration guide, worked example and the executable test suite.</div>
+        </div>
+
+        <aside class="detail-buy">
+          <div class="big-price">€89</div>
+          <div class="price-sub">launch price · one-time · free 1.x updates</div>
+          <div data-buy-for="iiot-pro"></div>
+          <noscript><span class="btn btn-primary btn-block is-disabled" title="Listing unpublished — pending CRA gates">Unavailable — pending republish</span></noscript>
+          <ul>
+            <li>34 PLCnext 2026.6 function blocks</li>
+            <li>One merged XML + individual POUs</li>
+            <li>Full source you can inspect and modify</li>
+            <li>Manual, integration guide and worked example</li>
+            <li>Python reference model, tests and verifier</li>
+            <li>Offline · no licence server · no telemetry</li>
+          </ul>
+          <p class="disclaimer">Independent third-party product, not certified and not safety-rated. Proprietary commercial licence — see the download for full terms.</p>
+        <p class="disclaimer">Independent third-party product. <strong>Not affiliated with, endorsed by, sponsored by or connected to</strong> any named vendor or standards body.</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-year>2026</span> Trellmere.</span>
+      <span class="footer-links"><a href="../catalog.html">Products</a><a href="../index.html#signup">Free cheat sheet</a></span>
+    </div>
+  </footer>
+
+  <script src="../assets/products.js?v=3"></script>
+  <script src="../assets/site.js?v=3"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flat patterns without guesswork: bend allowance, deduction and K-factor | Trellmere</title>
+  <meta name="description" content="A practical explanation of bend allowance, outside setback, bend deduction and K-factor — and a 10-minute test-coupon method to calibrate your own value.">
+  <link rel="canonical" href="https://kyliantewarie.github.io/trellmere-site-public/guides/sheet-metal-bend-allowance.html">
+  <link rel="stylesheet" href="../assets/style.css?v=3">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html"><span class="brand-mark">T</span>Trellmere <small>/ digital products</small></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a><a href="../catalog.html" data-nav="catalog.html">Products</a>
+        <a href="../guides/index.html" data-nav="guides/index.html">Guides</a>
+        <a href="../index.html#signup" class="btn btn-primary btn-sm nav-cta">Free cheat sheet</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="breadcrumb" style="padding-top:44px"><a href="../index.html">Home</a> / Guides</div>
+      <article class="prose">
+        <span class="eyebrow">Guide · 8 min</span>
+        <h1 style="font-size:clamp(2rem,4vw,2.8rem);letter-spacing:-.035em;line-height:1.15;margin:0 0 16px">Flat patterns without the guesswork</h1>
+        <p class="muted">Bend allowance, bend deduction, K-factor and outside setback — what each number actually means, and how to verify it against a real press brake.</p>
+
+        <h2>The problem with "just measure it"</h2>
+        <p>A folded sheet-metal part has a neutral axis: a layer inside the material that neither stretches nor compresses when you bend it. The flat length of the part is the length of that neutral axis through every bend, plus the straight sections. The K-factor tells you where that axis sits — as a fraction of material thickness from the inside surface.</p>
+        <p>Get K wrong and your flat blank is wrong. A part that should be 100 mm comes out 99.4 mm, the holes drift, and the tabs don't line up. Guessing is how you end up scrapping a prototype.</p>
+
+        <h2>The four numbers you need</h2>
+        <p>Given thickness <code>t</code>, inside bend radius <code>R</code>, bend angle <code>θ</code> (in radians) and K-factor <code>K</code>:</p>
+        <pre><code>BA   = θ · (R + K·t)              # bend allowance: arc length of the neutral axis
+OSSB = (R + t) · tan(θ / 2)        # outside setback: where the outside surfaces meet
+BD   = 2 · OSSB − BA               # bend deduction: what to subtract from outside dimensions</code></pre>
+        <p>Use <strong>BA</strong> when you're summing flat lengths segment by segment. Use <strong>BD</strong> when you're working from the outside dimensions of the finished part: flat length = outside leg 1 + outside leg 2 − BD.</p>
+
+        <h2>Picking a starting K-factor</h2>
+        <p>K depends on material, thickness, radius and forming method. As a starting point for air bending:</p>
+        <ul>
+          <li>Mild steel: <code>K ≈ 0.40–0.44</code></li>
+          <li>Stainless steel: <code>K ≈ 0.44–0.47</code></li>
+          <li>Aluminium: <code>K ≈ 0.33–0.40</code></li>
+        </ul>
+        <p>When the inside radius is large relative to thickness (roughly <code>R &gt; 2t</code>), K trends toward 0.5. When it's tight (<code>R &lt; t</code>), K trends lower. These are starting estimates, not shop calibration.</p>
+
+        <div class="callout"><strong>The only K-factor you can trust is the one you measured.</strong> Every shop has its own tooling, material batch and bend method. Treat published tables as a first guess.</div>
+
+        <h2>A 10-minute coupon test</h2>
+        <ol>
+          <li>Cut three strips, 20 mm wide and 100 mm long, from the same sheet as your part.</li>
+          <li>Bend them at 90° on the same brake, with the same tooling and radius you'll use for the real part.</li>
+          <li>Measure the resulting outside leg lengths, <code>L1</code> and <code>L2</code>, to 0.1 mm.</li>
+          <li>Solve for your actual bend deduction from the original 100 mm strip length: <code>BD = 100 − (L1 + L2)</code>.</li>
+          <li>Back out K: <code>BA = 2·OSSB − BD</code>, then <code>K = (BA/θ − R) / t</code>.</li>
+          <li>Use that K for the rest of the job, and record it with the material and tooling.</li>
+        </ol>
+
+        <h2>How SheetFab uses this</h2>
+        <p><a href="../products/sheetfab.html">SheetFab</a> implements exactly these formulas. It develops the chain into flat segments, bend lines and holes, then cross-checks the total flat length through two independent routes to 1e-9 before returning a result. It writes a bend table alongside the DXF so you can compare its numbers with your coupon measurement.</p>
+        <p>The DXF carries separate <code>CUT</code>, <code>BEND_UP</code>, <code>BEND_DOWN</code>, <code>HOLES</code> and <code>INFO</code> layers, so your cutting software gets clean geometry and your shop gets the bend data in the same package.</p>
+
+        <h2>Download the one-page cheat sheet</h2>
+        <p>Want these formulas, the starting table and the coupon method on a single printable page? <a href="../index.html#signup">Get the free K-factor cheat sheet</a> — or <a href="../lead-magnets/k-factor-cheat-sheet.html">read the web version</a>.</p>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© <span data-year>2026</span> Trellmere.</span><span class="footer-links"><a href="../catalog.html">Products</a><a href="../index.html#signup">Free cheat sheet</a></span></div></footer>
+  <script src="../assets/products.js?v=3"></script><script src="../assets/site.js?v=3"></script>
+</body>
+</html>

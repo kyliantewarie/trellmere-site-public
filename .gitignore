@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# Credentials — must never be committed (tokens live outside this repo)
+.gumroad_token
+.github_token*
+*token*.txt
+*.pem
+*.key
+.env

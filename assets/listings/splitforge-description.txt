@@ -1,0 +1,42 @@
+**Your AI-generated model looks great. It will not fit on your printer — and its arms, armour and props are fused into one solid shell.**
+
+SplitForge is a Blender extension that turns that mesh into a set of printable parts in one panel. No cloud, no licence server, no round-trip through another tool.
+
+---
+
+### How it works
+
+1. **Analyse** the model against your build volume (X/Y/Z + clearance).
+2. **Plan shape-aware cuts.** The planner looks for planes that cross the least geometry — a narrow neck — instead of blindly bisecting the bounding box.
+3. **Split** into capped, watertight parts that each fit the printer. The original mesh is untouched.
+4. **Join them back** with fitted pegs and sockets, dowel holes or magnet pockets.
+5. **Hollow** each part with a real millimetre wall and drill a drain hole at the lowest point.
+6. **Check the fit** with an exploded view, lay every part flat, and export one STL per part.
+
+Designed for miniatures, busts, cosplay props, terrain, scans and meshes from Meshy / Tripo / Rodin / Hunyuan3D.
+
+---
+
+### What you get
+
+- The Blender 4.2–5.3 extension (zip, install from disk)
+- Full Python source under GPL-3.0-or-later
+- Pure-Python planning core (30 unit tests) plus a headless Blender smoke test
+- A sample `.blend` and a demo GIF
+- Free updates for the 1.x line
+
+### Honest limitations
+
+- Cut smoothness depends on mesh density — a coarse mesh gives a stair-stepped edge.
+- Connectors attach to flat cut faces; very thin or curved faces can be skipped. Check the **Verify Assembly** report before export.
+- Hollowing needs a watertight part; the Analyse step warns you if the mesh is not watertight.
+- STL export only — no 3MF plate packing, slicer integration or automatic supports.
+- Material presets give starting clearances, not a calibrated profile for your printer. Print a test coupon first.
+
+---
+
+### Verified
+
+Deterministic planning: the same mesh and settings always produce the same cuts. A 20,000-vertex mesh plans in about 0.06 s. The full verification suite is included in the download.
+
+All sales final on the marketplace — but if the add-on cannot cut your model, message me before giving up and I will help you sort it out.

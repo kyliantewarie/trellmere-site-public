@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SheetFab — Sheet metal flat patterns in Blender | Trellmere</title>
+  <meta name="description" content="Turn a folded sheet-metal part into a manufacturing-ready flat pattern inside Blender. Real K-factor bend allowance, bend lines and layered DXF export.">
+  <link rel="canonical" href="https://kyliantewarie.github.io/trellmere-site-public/products/sheetfab.html">
+  <meta property="og:title" content="SheetFab — Sheet metal flat patterns in Blender">
+  <meta property="og:description" content="Unfold a folded metal part correctly inside Blender and export a laser-ready, layered DXF.">
+  <link rel="stylesheet" href="../assets/style.css?v=3">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SheetFab","applicationCategory":"DesignApplication","operatingSystem":"Blender 4.2+","offers":{"@type":"Offer","price":"27","priceCurrency":"EUR"}}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html"><span class="brand-mark">T</span>Trellmere <small>/ digital products</small></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../catalog.html" data-nav="catalog.html">Products</a>
+        <a href="../guides/index.html" data-nav="guides/index.html">Guides</a>
+        <a href="../index.html#signup" class="btn btn-primary btn-sm nav-cta">Free cheat sheet</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container detail-hero">
+      <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../catalog.html">Products</a> / SheetFab</div>
+      <div class="callout"><strong>Independent third-party product.</strong> Developed by Trellmere. <strong>Not affiliated with, endorsed by, sponsored by, or in any way connected to</strong> Phoenix Contact, Siemens, Blender Foundation, Home Assistant, OpenWrt, Microsoft, PLCopen or any standards body named. Trademarks are the property of their respective owners and are used only to describe compatibility.</div>
+      <div class="detail">
+        <div>
+          <span class="eyebrow">Blender add-on · v1.2</span>
+          <h1>Sheet metal flat patterns, without leaving Blender.</h1>
+          <p class="lede">Fold a part, unfold it correctly, and export a laser-ready DXF. SheetFab does the bend math properly — thickness, inside radius and K-factor — inside the app you already model in.</p>
+          <img class="card-thumb" src="https://public-files.gumroad.com/99gxrm3kdt995kx03o5poxa36zup" alt="SheetFab product preview" style="margin:24px 0">
+
+          <p>Stop round-tripping geometry through a second CAD program just to get a flat blank. SheetFab builds the part in a sidebar panel, develops it into a flat pattern with cut outline and bend lines, and writes out a layered DXF, a bend table and an SVG preview. Everything runs locally.</p>
+
+          <h2>What you get</h2>
+          <ul class="prose-list">
+            <li>Build parts in-panel: material preset, thickness, inside radius, K-factor, leg lengths, bend angles, widths and holes. JSON remains available for power users.</li>
+            <li>Real bend allowance, bend deduction and outside-setback calculations — not a visual approximation.</li>
+            <li>Flat blank with cut outline, up/down bend lines and hole circles.</li>
+            <li>Layered DXF (<code>CUT</code> / <code>BEND_UP</code> / <code>BEND_DOWN</code> / <code>HOLES</code> / <code>INFO</code>), CSV bend table and SVG preview.</li>
+            <li>Shape-aware nesting and kerf compensation for sheet layouts.</li>
+            <li>2D STEP import (POLYLINE, LINE, B_SPLINE control polygon, CIRCLE) from AP203/AP214 text files.</li>
+            <li>Non-destructive preview mesh and one-click clear.</li>
+          </ul>
+
+          <h2>Honest limitations</h2>
+          <p>Not a general CAD package and not a CAM toolpath generator — it produces cut geometry and bend data; your cutting software still owns laser settings and toolpaths. K-factors are estimates. Bend a test coupon and measure it before production. macOS and Linux are untested; Windows with Blender 4.2.23 and 5.3.0 is verified.</p>
+
+          <div class="callout"><strong>Verified, not claimed.</strong> 236 automated checks, 43 artifact checks, a strict DXF audit and real smoke tests on two Blender versions. GPL-3.0-or-later — source ships with the extension.</div>
+
+          <p><a href="../guides/sheet-metal-bend-allowance.html">Read the bend-allowance guide →</a></p>
+        </div>
+
+        <aside class="detail-buy">
+          <div class="big-price">€27</div>
+          <div class="price-sub">€27 one-time · free updates</div>
+          <div data-buy-for="sheetfab"></div>
+          <noscript><span class="btn btn-primary btn-block is-disabled" title="Listing unpublished — pending CRA gates">Unavailable — pending republish</span></noscript>
+          <div data-marketplace-for="sheetfab" style="margin-top:14px"></div>
+          <ul>
+            <li>Instant download, Blender 4.2+</li>
+            <li>Free updates within 1.x</li>
+            <li>Source included (GPL-3.0+)</li>
+            <li>Direct support from the author</li>
+            <li>Gumroad refund policy applies</li>
+          </ul>
+          <p class="disclaimer">A K-factor is an estimate, not a shop-specific calibration. Verify with a test coupon before cutting production parts.</p>
+        <p class="disclaimer">Independent third-party product. <strong>Not affiliated with, endorsed by, sponsored by or connected to</strong> any named vendor or standards body.</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-year>2026</span> Trellmere.</span>
+      <span class="footer-links"><a href="../catalog.html">Products</a><a href="../index.html#signup">Free cheat sheet</a></span>
+    </div>
+  </footer>
+
+  <script src="../assets/products.js?v=3"></script>
+  <script src="../assets/site.js?v=3"></script>
+</body>
+</html>

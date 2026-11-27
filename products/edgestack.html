@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EdgeStack for PLCnext — turn-key edge IoT stack | Trellmere</title>
+  <meta name="description" content="Deploy a pre-configured, low-RAM Docker monitoring stack on a Phoenix Contact PLCnext Control controller: Node-RED, MQTT, InfluxDB, Grafana, dashboards, backup scripts and a field manual.">
+  <link rel="canonical" href="https://kyliantewarie.github.io/trellmere-site-public/products/edgestack.html">
+  <link rel="stylesheet" href="../assets/style.css?v=3">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "EdgeStack for PLCnext", "applicationCategory": "DeveloperApplication", "operatingSystem": "PLCnext Control", "offers": {"@type": "Offer", "price": "45", "priceCurrency": "EUR"}}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html"><span class="brand-mark">T</span>Trellmere <small>/ digital products</small></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a><a href="../catalog.html" data-nav="catalog.html">Products</a>
+        <a href="../guides/index.html" data-nav="guides/index.html">Guides</a>
+        <a href="../index.html#signup" class="btn btn-primary btn-sm nav-cta">Free cheat sheet</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container detail-hero">
+      <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../catalog.html">Products</a> / EdgeStack</div>
+      <div class="callout"><strong>Independent third-party product.</strong> Developed by Trellmere. <strong>Not affiliated with, endorsed by, sponsored by, or in any way connected to</strong> Phoenix Contact, Siemens, Blender Foundation, Home Assistant, OpenWrt, Microsoft, PLCopen or any standards body named. Trademarks are the property of their respective owners and are used only to describe compatibility.</div>
+      <div class="detail">
+        <div>
+          <span class="eyebrow">PLCnext Control · Function extension</span>
+          <h1>Run a real monitoring stack on a 512 MB controller.</h1>
+          <p class="lede">Standard Docker images consume 600 MB+ and wear out controller flash. EdgeStack is tuned for the AXC F hardware: the whole stack stays under 280 MB, writes to external storage, and installs with one command.</p>
+          <img class="card-thumb" src="https://public-files.gumroad.com/cz2l915cc700j0n31yav4ov1i5gm" alt="EdgeStack for PLCnext" style="margin:24px 0">
+
+          <h2>What is inside</h2>
+          <ul class="prose-list">
+            <li><strong>Multi-arch Docker Compose stack</strong> — Mosquitto, Node-RED 3.1, InfluxDB 1.8 and Grafana 10.4, tuned with low-RAM limits, flash-safe sync intervals and retention policies.</li>
+            <li><strong>ISA-101 situational-awareness dashboard</strong> — high-contrast grayscale, colour reserved for abnormal states, live OEE, trends and controller diagnostics.</li>
+            <li><strong>Node-RED flow package</strong> — OPC UA, Modbus, PLCnext GDS connector templates, OEE engine, downtime alert dispatcher and a Modbus TCP server gateway.</li>
+            <li><strong>Deployment and recovery scripts</strong> — SD-card setup, Docker data-root relocation, swap/OOM tuning, one-command installer, health check, backup and restore.</li>
+            <li><strong>Modbus register map and 10-page field manual</strong> — architecture diagrams, memory tables, wiring guides and a troubleshooting matrix.</li>
+          </ul>
+
+          <h2>Licence</h2>
+          <p><strong>€45 once</strong>, with commercial use included: internal work, client machines and delivered systems are all covered. The archive contains the licence text and an explainer.</p>
+
+          <h2>Verification status</h2>
+          <p>Static configuration, flow logic, simulator and hardware-simulation layers are documented in <code>VERIFICATION.md</code>. The runtime smoke test runs on a GitHub-hosted runner. <strong>Hardware commissioning is the buyer's responsibility</strong> — this is a simulated, not hardware-validated product, and is deliberately framed that way.</p>
+
+          <h2>Compatibility</h2>
+          <p>AXC F 1152 / 2152 and other PLCnext Control devices with Docker support. ARM32v7 and x86_64 images. Offline installation path available.</p>
+        </div>
+
+        <aside class="detail-buy">
+          <div class="big-price">€45</div>
+          <div class="price-sub">€45 one-time · commercial use included</div>
+          <div data-buy-for="edgestack"></div>
+          <noscript><span class="btn btn-primary btn-block is-disabled" title="Listing unpublished — pending CRA gates">Unavailable — pending republish</span></noscript>
+          <ul>
+            <li>Complete Docker Compose stack + dashboards</li>
+            <li>Node-RED flows and Modbus register map</li>
+            <li>Installer, health check, backup and restore scripts</li>
+            <li>10-page engineering field manual</li>
+            <li>Both licence tiers included in the archive</li>
+            <li>Offline, no telemetry, no licence server</li>
+          </ul>
+          <p class="disclaimer">Independent third-party product, not certified and not safety-rated. Safety interlocks must remain in IEC 61131-3 code.</p>
+        <p class="disclaimer">Independent third-party product. <strong>Not affiliated with, endorsed by, sponsored by or connected to</strong> any named vendor or standards body.</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-year>2026</span> Trellmere.</span>
+      <span class="footer-links"><a href="../catalog.html">Products</a><a href="../index.html#signup">Free cheat sheet</a></span>
+    </div>
+  </footer>
+
+  <script src="../assets/products.js?v=3"></script>
+  <script src="../assets/site.js?v=3"></script>
+</body>
+</html>
